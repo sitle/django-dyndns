@@ -1,0 +1,11 @@
+{{ userdyndns }}
+
+{% if list_hosts %}
+    <ul>
+    {% for id, hostname, ip_addr, last_seen in list_hosts %}
+        <li>{{ id }} {{ hostname }} {{ ip_addr }} {{ last_seen }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hosts</p>
+{% endif %}
